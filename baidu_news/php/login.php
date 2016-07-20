@@ -45,7 +45,7 @@ function test_input($data)
 }
 ?>
     <!--头部-->
-
+<div class="container-fluid">    
     <div class="header">
         <div class="circle">
             <span class="circle-content"></span>
@@ -111,6 +111,7 @@ function test_input($data)
     <div class="footer">
         <p>©版权所有  2015</p>
     </div>
+</div>
 
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script type="text/javascript" src="../js/login.js"></script>

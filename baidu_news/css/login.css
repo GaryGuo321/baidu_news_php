@@ -1,16 +1,33 @@
+html {
+    height: 100%;
+    min-height: 600px;
+}
 
-
-body{
+body {
     background: url(../image/background.png);
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    display: block;
     font-family: "Microsoft Yahei", "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
-.header{
+
+.container-fluid {
+    padding: 0;
+    min-width: 700px;
+    height: 100%;
+    min-height: 600px;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.header {
     height: 50px;
     background-color: #af5c0d;
 }
-.circle{
+
+.circle {
     width: 20px;
     height: 20px;
     background-color: #e69510;
@@ -21,7 +38,8 @@ body{
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
 }
-.circle-content{
+
+.circle-content {
     display: inline-block;
     border: 7px solid #fff;
     margin-left: 8px;
@@ -30,36 +48,38 @@ body{
     border-top-color: transparent;
     border-bottom-color: transparent;
 }
-.header p{
+
+.header p {
     float: left;
     margin-top: 13px;
     padding-left: 10px;
     color: #fff;
 }
-.header ul{
+
+.header ul {
     float: right;
     margin-top: 13px;
     padding-right: 40px;
 }
-.header ul a{
+
+.header ul a {
     color: #eaf6fc;
 }
 
-
-
-
-.title{
+.title {
     height: 80px;
     margin-top: 65px;
     width: 300px;
     margin-left: auto;
     margin-right: auto;
 }
-.title img{
+
+.title img {
     float: left;
     margin-left: 8px;
 }
-.title .title-word{
+
+.title .title-word {
     font-size: 22px;
     color: #fff;
     margin-bottom: -3px;
@@ -67,7 +87,8 @@ body{
     margin-left: 18px;
     margin-top: 14px;
 }
-.title small{
+
+.title small {
     font-size: 9px;
     color: #dcdcdc;
     margin-left: 21px;
@@ -75,13 +96,10 @@ body{
     float: left;
 }
 
-
-
-
-.login{
-    -webkit-box-shadow: 0 0 8px rgba(0,0,0,.39);
-    -moz-box-shadow: 0 0 8px rgba(0,0,0,.39);
-    box-shadow: 0 0 8px rgba(0,0,0,.39);
+.login {
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .39);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .39);
+    box-shadow: 0 0 8px rgba(0, 0, 0, .39);
     width: 646px;
     height: 280px;
     margin-left: auto;
@@ -89,19 +107,21 @@ body{
     margin-top: 16px;
     position: relative;
 }
-.left{
+
+.left {
     width: 230px;
     height: 280px;
-    background: -webkit-linear-gradient(#ffcb75 40px ,#ffba53);
+    background: -webkit-linear-gradient(#ffcb75 40px, #ffba53);
     opacity: 0.7;
     float: left;
     text-align: center;
     line-height: 280px;
-    -webkit-box-shadow: 2px 0 1px rgba(0,0,0,.39);
-    -moz-box-shadow: 2px 0 1px rgba(0,0,0,.39);
-    box-shadow: 2px 0 1px rgba(0,0,0,.39);
+    -webkit-box-shadow: 2px 0 1px rgba(0, 0, 0, .39);
+    -moz-box-shadow: 2px 0 1px rgba(0, 0, 0, .39);
+    box-shadow: 2px 0 1px rgba(0, 0, 0, .39);
 }
-.left span{
+
+.left span {
     display: inline-block;
     position: absolute;
     border: 10px solid #fff;
@@ -111,45 +131,51 @@ body{
     left: 220px;
     top: 25px;
 }
-.right{
+
+.right {
     height: 280px;
     width: 416px;
     background-color: #fff;
     opacity: 0.7;
     float: right;
-    -webkit-box-shadow: 2px 0 1px rgba(0,0,0,.39);
-    -moz-box-shadow: 2px 0 1px rgba(0,0,0,.39);
-    box-shadow: 2px 0 1px rgba(0,0,0,.39);
+    -webkit-box-shadow: 2px 0 1px rgba(0, 0, 0, .39);
+    -moz-box-shadow: 2px 0 1px rgba(0, 0, 0, .39);
+    box-shadow: 2px 0 1px rgba(0, 0, 0, .39);
 }
-.people-login{
+
+.people-login {
     font-size: 22px;
     color: #e4710d;
     margin-top: 24px;
     margin-left: 45px;
     margin-bottom: 30px;
 }
-.people-login small{
+
+.people-login small {
     color: #d3d3d3;
     font-size: 15px;
 }
+
 .form-horizontal .control-group {
     margin-bottom: 20px;
     margin-left: -134px;
 }
-.checkbox{
+
+.checkbox {
     display: inline-block;
 }
-.password-forget{
+
+.password-forget {
     display: inline-block;
     margin-left: 20px;
 }
-.btn{
+
+.btn {
     display: block;
     margin-top: 10px;
 }
 
-
-.footer{
+.footer {
     background-color: #e48830;
     height: 50px;
     line-height: 50px;
@@ -160,21 +186,26 @@ body{
     bottom: 0;
 }
 
-.icon-question-sign,.icon-home,.icon-file{
+.icon-question-sign,
+.icon-home,
+.icon-file {
     margin-top: 3px;
     margin-right: -7px;
 }
-.bottom{
+
+.bottom {
     width: 50px;
 }
-.icon-star{
+
+.icon-star {
     margin-left: -3px;
 }
 
-.english{
+.english {
     margin-top: 10px;
 }
-.error{
+
+.error {
     color: #FF0000;
     display: inline-block;
 }

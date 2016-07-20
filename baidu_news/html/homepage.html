@@ -46,146 +46,160 @@
                 </div>
             </div>
         </div>
-        <!--中间内容部分-->
-        <div class="main">
-            <!--位置基本信息-->
-            <div class="guide">
-                <div class="mail-list">
-                    <span>新闻类别</span>
-                </div>
-                <div class="position">
-                    <p>位置：<a href="#">首页</a></p>
-                </div>
+        <!--位置基本信息-->
+        <div class="guide">
+            <div class="mail-list">
+                <span>新闻类别</span>
             </div>
-            <!--主题内容部分-->
-            <div class="content">
-                <!--主题内容右边内容部分-->
-                <div class="content-right">
-                    <p class="welcome">欢迎登录新闻信息管理系统</p>
-                    <!-- 往数据库插入数据start -->
-                    <form class="form-inline form form-one" method="post" action="../php/insert-message.php">
-                        <div class="controls input-prepend">
-                            <span class="add-on">新闻类别：</span>
-                            <input type="text" name="news-sort" readonly class="sort-content">
-                        </div>
-                        <br/>
-                        <div class="controls input-prepend">
-                            <span class="add-on">新闻标题：</span>
-                            <input type="text" name="news-title">
-                        </div>
-                        <br/>
-                        <div class="controls input-prepend">
-                            <span class="add-on more-content">新闻图片：</span>
-                            <textarea name="news-image"></textarea>
-                        </div>
-                        <br/>
-                        <div class="controls input-prepend">
-                            <span class="add-on more-content">新闻内容：</span>
-                            <textarea name="news-content"></textarea>
-                        </div>
-                        <br/>
-                        <div class="controls input-prepend">
-                            <span class="add-on">新闻来源：</span>
-                            <input type="text" name="news-source">
-                        </div>
-                        <br />
-                        <input type="submit" class="btn normal" name="insert" value="insert">
-                        <!-- <input type="submit" class="btn normal" name="delete" value="delete"> -->
-                        <!--  <button class="btn" type="button"><i class="icon-search"></i> 修改</button>
+            <div class="nav-left">
+                <ul class="nav2">
+                    <li class="nav2-1"><a href="" value="recommend"><span><img src="../image/leftico01.png"></span>推荐</a></li>
+                    <li class="nav2-1"><a href="" value="common"><span><img src="../image/leftico02.png"></span>百家</a></li>
+                    <li class="nav2-1"><a href="" value="localtion"><span><img src="../image/leftico03.png"></span>本地</a></li>
+                    <li class="nav2-1"><a href="" value="picture"><span><img src="../image/leftico04.png"></span>图片</a></li>
+                    <li class="nav2-1"><a href="" value="entertainment"><span><img src="../image/leftico02.png"></span>娱乐</a></li>
+                    <li class="nav2-1"><a href="" value="sociology"><span><img src="../image/leftico04.png"></span>社会</a></li>
+                </ul>
+            </div>
+
+            <!-- <div class="position">
+                <p>位置：<a href="#">首页</a></p>
+            </div> -->
+        </div>
+        <!--主题内容部分-->
+        <div class="content">
+            <!-- 新添加 -->
+            <div class="position">
+                <p>位置：<a href="#">首页</a></p>
+            </div>
+
+            <!--主题内容右边内容部分-->
+            <div class="content-right">
+                <p class="welcome">欢迎登录新闻信息管理系统</p>
+                <!-- 往数据库插入数据start -->
+                <form class="form-inline form form-one" method="post" action="../php/insert-message.php">
+                    <div class="controls input-prepend">
+                        <span class="add-on">新闻类别：</span>
+                        <input type="text" name="news-sort" readonly class="sort-content">
+                    </div>
+                    <br/>
+                    <div class="controls input-prepend">
+                        <span class="add-on">新闻标题：</span>
+                        <input type="text" name="news-title">
+                    </div>
+                    <br/>
+                    <div class="controls input-prepend">
+                        <span class="add-on more-content">新闻图片：</span>
+                        <textarea name="news-image"></textarea>
+                    </div>
+                    <br/>
+                    <div class="controls input-prepend">
+                        <span class="add-on more-content">新闻内容：</span>
+                        <textarea name="news-content"></textarea>
+                    </div>
+                    <br/>
+                    <div class="controls input-prepend">
+                        <span class="add-on">新闻来源：</span>
+                        <input type="text" name="news-source">
+                    </div>
+                    <br />
+                    <input type="submit" class="btn normal" name="insert" value="insert">
+                    <!-- <input type="submit" class="btn normal" name="delete" value="delete"> -->
+                    <!--  <button class="btn" type="button"><i class="icon-search"></i> 修改</button>
                         <button class="btn" type="button"><i class=" icon-share"></i> 查询</button> -->
-                    </form>
-                    <form class="form-inline form form-two" method="post" action="../php/insert-message.php">
-                        <div class="controls input-prepend">
-                            <span class="add-on">新闻类别：</span>
-                            <input type="text" name="news-sort" readonly class="sort-content">
-                        </div>
-                        <br/>
-                        <div class="controls input-prepend">
-                            <span class="add-on">新闻标题：</span>
-                            <input type="text" name="news-title">
-                        </div>
-                        <br/>
-                        <div class="controls input-prepend">
-                            <span class="add-on more-content">新闻图片：</span>
-                            <textarea name="news-image"></textarea>
-                        </div>
-                        <br/>
-                        <input type="submit" class="btn special" name="insert" value="insert">
-                        <!-- <input type="submit" class="btn special" name="delete" value="delete"> -->
-                        <!-- <button class="btn" type="button"><i class="icon-search"></i> 修改</button>
+                </form>
+                <form class="form-inline form form-two" method="post" action="../php/insert-message.php">
+                    <div class="controls input-prepend">
+                        <span class="add-on">新闻类别：</span>
+                        <input type="text" name="news-sort" readonly class="sort-content">
+                    </div>
+                    <br/>
+                    <div class="controls input-prepend">
+                        <span class="add-on">新闻标题：</span>
+                        <input type="text" name="news-title">
+                    </div>
+                    <br/>
+                    <div class="controls input-prepend">
+                        <span class="add-on more-content">新闻图片：</span>
+                        <textarea name="news-image"></textarea>
+                    </div>
+                    <br/>
+                    <input type="submit" class="btn special" name="insert" value="insert">
+                    <!-- <input type="submit" class="btn special" name="delete" value="delete"> -->
+                    <!-- <button class="btn" type="button"><i class="icon-search"></i> 修改</button>
                         <button class="btn" type="button"><i class=" icon-share"></i> 查询</button> -->
-                    </form>
-                    <!-- 往数据库插入数据end -->
-                    <!-- 从数据库读取数据start -->
-                    <div class="table-content">
-                        <div class="button-sort">
-                            <a href="" class="btn" value="insert">导入</a>
-                            <a href="" class="btn" value="delete">删除</a>
-                            <!-- <a href="" class="btn">修改</a> -->
+                </form>
+                <!-- 往数据库插入数据end -->
+                <!-- 从数据库读取数据start -->
+                <div class="table-content">
+                    <div class="button-sort">
+                        <a href="" class="btn" value="insert">导入</a>
+                        <a href="" class="btn" value="delete">删除</a>
+                        <!-- <a href="" class="btn">修改</a> -->
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th width="60px">news-id</th>
+                                <th>news-title</th>
+                                <th class="long-url">img-source</th>
+                                <th>news-content</th>
+                                <th width="80px">add-times</th>
+                                <th width="90px">news-source</th>
+                                <th width="60px">modify</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="table-picture-content">
+                    <div class="button-sort">
+                        <a href="" class="btn" value="insert">导入</a>
+                        <a href="" class="btn" value="delete">删除</a>
+                        <!-- <a href="" class="btn">修改</a> -->
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>news-id</th>
+                                <th>news-title</th>
+                                <th class="long-picture-url">img-source</th>
+                                <th>modify</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <!-- 从数据库读取数据end -->
+                <!-- 从数据库中删除数据start -->
+                <form class="form-inline form form-three" method="post" action="../php/delete-message.php">
+                    <div class="controls input-prepend">
+                        <span class="add-on">新闻类别：</span>
+                        <input type="text" name="news-sort" readonly class="sort-content">
+                    </div>
+                    <br/>
+                    <!-- <div class="controls input-prepend">
+                            <span class="add-on">新闻 ID：</span>
+                            <input type="text" name="news-id">
                         </div>
+                        <br/> -->
+                    <div class="delete-content">
                         <table class="table">
                             <thead>
                                 <tr>
+                                    <th width="50px">select</th>
                                     <th width="60px">news-id</th>
                                     <th>news-title</th>
                                     <th class="long-url">img-source</th>
                                     <th>news-content</th>
                                     <th width="80px">add-times</th>
                                     <th width="90px">news-source</th>
-                                    <th width="60px">modify</th>
                                 </tr>
                             </thead>
                             <tbody></tbody>
                         </table>
                     </div>
-                    <div class="table-picture-content">
-                        <div class="button-sort">
-                            <a href="" class="btn" value="insert">导入</a>
-                            <a href="" class="btn" value="delete">删除</a>
-                            <!-- <a href="" class="btn">修改</a> -->
-                        </div>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>news-id</th>
-                                    <th>news-title</th>
-                                    <th class="long-picture-url">img-source</th>
-                                    <th>modify</th>
-                                </tr>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
-                    </div>
-                    <!-- 从数据库读取数据end -->
-                    <!-- 从数据库中删除数据start -->
-                    <form class="form-inline form form-three" method="post" action="../php/delete-message.php">
-                        <div class="controls input-prepend">
-                            <span class="add-on">新闻类别：</span>
-                            <input type="text" name="news-sort" readonly class="sort-content">
-                        </div>
-                        <br/>
-                        <!-- <div class="controls input-prepend">
-                            <span class="add-on">新闻 ID：</span>
-                            <input type="text" name="news-id">
-                        </div>
-                        <br/> -->
-                        <div class="delete-content">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th width="50px">select</th>
-                                        <th width="60px">news-id</th>
-                                        <th>news-title</th>
-                                        <th class="long-url">img-source</th>
-                                        <th>news-content</th>
-                                        <th width="80px">add-times</th>
-                                        <th width="90px">news-source</th>
-                                    </tr>
-                                </thead>
-                                <tbody></tbody>
-                            </table>
-                        </div>
-                        <div class="delete-picture-content">
+                    <div class="delete-picture-content">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -203,80 +217,79 @@
                     <a href="" class="select-back">反选</a>
                     <br/>
                     <input type="submit" class="btn special" name="delete" value="delete">
-                    </form>
-                    <!-- 从数据库中删除数据end -->
-                    <!-- 更新数据库中数据start -->
-                    <form class="form-inline form form-four" method="post" action="../php/update-message.php">
-                        <div class="controls input-prepend">
-                            <span class="add-on">新闻类别：</span>
-                            <input type="text" name="news-sort" readonly class="sort-content">
-                        </div>
-                        <br/>
-                        <div class="controls input-prepend">
-                            <span class="add-on">新闻 ID：</span>
-                            <input type="text" name="news-id" readonly class="news-id">
-                        </div>
-                        <br/>
-                        <div class="controls input-prepend">
-                            <span class="add-on">新闻标题：</span>
-                            <input type="text" name="news-title">
-                        </div>
-                        <br/>
-                        <div class="controls input-prepend">
-                            <span class="add-on more-content">新闻图片：</span>
-                            <textarea name="news-image"></textarea>
-                        </div>
-                        <br/>
-                        <div class="controls input-prepend">
-                            <span class="add-on more-content">新闻内容：</span>
-                            <textarea name="news-content"></textarea>
-                        </div>
-                        <br/>
-                        <div class="controls input-prepend">
-                            <span class="add-on">新闻来源：</span>
-                            <input type="text" name="news-source">
-                        </div>
-                        <br />
-                        <input type="submit" class="btn normal" name="update" value="update">
-                    </form>
-                    <form class="form-inline form form-five" method="post" action="../php/update-message.php">
-                        <div class="controls input-prepend">
-                            <span class="add-on">新闻类别：</span>
-                            <input type="text" name="news-sort" readonly class="sort-content">
-                        </div>
-                        <br/>
-                        <div class="controls input-prepend">
-                            <span class="add-on">新闻 ID：</span>
-                            <input type="text" name="news-id" class="news-id" readonly>
-                        </div>
-                        <br/>
-                        <div class="controls input-prepend">
-                            <span class="add-on">新闻标题：</span>
-                            <input type="text" name="news-title">
-                        </div>
-                        <br/>
-                        <div class="controls input-prepend">
-                            <span class="add-on more-content">新闻图片：</span>
-                            <textarea name="news-image"></textarea>
-                        </div>
-                        <br/>
-                        <input type="submit" class="btn special" name="update" value="update">
-                    </form>
-                    <!-- 更新数据库中数据end -->
-                </div>
-                <!--主题内容部分左边导航栏-->
-                <div class="nav-left">
-                    <ul class="nav2">
-                        <li class="nav2-1"><a href="" value="recommend"><span><img src="../image/leftico01.png"></span>推荐</a></li>
-                        <li class="nav2-1"><a href="" value="common"><span><img src="../image/leftico02.png"></span>百家</a></li>
-                        <li class="nav2-1"><a href="" value="localtion"><span><img src="../image/leftico03.png"></span>本地</a></li>
-                        <li class="nav2-1"><a href="" value="picture"><span><img src="../image/leftico04.png"></span>图片</a></li>
-                        <li class="nav2-1"><a href="" value="entertainment"><span><img src="../image/leftico02.png"></span>娱乐</a></li>
-                        <li class="nav2-1"><a href="" value="sociology"><span><img src="../image/leftico04.png"></span>社会</a></li>
-                    </ul>
-                </div>
+                </form>
+                <!-- 从数据库中删除数据end -->
+                <!-- 更新数据库中数据start -->
+                <form class="form-inline form form-four" method="post" action="../php/update-message.php">
+                    <div class="controls input-prepend">
+                        <span class="add-on">新闻类别：</span>
+                        <input type="text" name="news-sort" readonly class="sort-content">
+                    </div>
+                    <br/>
+                    <div class="controls input-prepend">
+                        <span class="add-on">新闻 ID：</span>
+                        <input type="text" name="news-id" readonly class="news-id">
+                    </div>
+                    <br/>
+                    <div class="controls input-prepend">
+                        <span class="add-on">新闻标题：</span>
+                        <input type="text" name="news-title">
+                    </div>
+                    <br/>
+                    <div class="controls input-prepend">
+                        <span class="add-on more-content">新闻图片：</span>
+                        <textarea name="news-image"></textarea>
+                    </div>
+                    <br/>
+                    <div class="controls input-prepend">
+                        <span class="add-on more-content">新闻内容：</span>
+                        <textarea name="news-content"></textarea>
+                    </div>
+                    <br/>
+                    <div class="controls input-prepend">
+                        <span class="add-on">新闻来源：</span>
+                        <input type="text" name="news-source">
+                    </div>
+                    <br />
+                    <input type="submit" class="btn normal" name="update" value="update">
+                </form>
+                <form class="form-inline form form-five" method="post" action="../php/update-message.php">
+                    <div class="controls input-prepend">
+                        <span class="add-on">新闻类别：</span>
+                        <input type="text" name="news-sort" readonly class="sort-content">
+                    </div>
+                    <br/>
+                    <div class="controls input-prepend">
+                        <span class="add-on">新闻 ID：</span>
+                        <input type="text" name="news-id" class="news-id" readonly>
+                    </div>
+                    <br/>
+                    <div class="controls input-prepend">
+                        <span class="add-on">新闻标题：</span>
+                        <input type="text" name="news-title">
+                    </div>
+                    <br/>
+                    <div class="controls input-prepend">
+                        <span class="add-on more-content">新闻图片：</span>
+                        <textarea name="news-image"></textarea>
+                    </div>
+                    <br/>
+                    <input type="submit" class="btn special" name="update" value="update">
+                </form>
+                <!-- 更新数据库中数据end -->
             </div>
-        </div>
+            <!--主题内容部分左边导航栏-->
+            <!-- <div class="nav-left">
+                <ul class="nav2">
+                    <li class="nav2-1"><a href="" value="recommend"><span><img src="../image/leftico01.png"></span>推荐</a></li>
+                    <li class="nav2-1"><a href="" value="common"><span><img src="../image/leftico02.png"></span>百家</a></li>
+                    <li class="nav2-1"><a href="" value="localtion"><span><img src="../image/leftico03.png"></span>本地</a></li>
+                    <li class="nav2-1"><a href="" value="picture"><span><img src="../image/leftico04.png"></span>图片</a></li>
+                    <li class="nav2-1"><a href="" value="entertainment"><span><img src="../image/leftico02.png"></span>娱乐</a></li>
+                    <li class="nav2-1"><a href="" value="sociology"><span><img src="../image/leftico04.png"></span>社会</a></li>
+                </ul>
+            </div>
+ -->        </div>
         <!--尾部-->
         <div class="footer">
             ©版权所有 2015
