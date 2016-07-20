@@ -2,16 +2,16 @@
     // 获取点击的类名
 $sortName = $_POST["name"];
 // 读取数据库
-$con      = mysql_connect("localhost", "root", "");
+$con      = mysqli_connect("localhost", "root", "123456");
 if (!$con) {
-    die('Could not connect: ' . mysql_error());
+    die("Connection failed: " . mysqli_connect_error());
 } else {
-    mysql_select_db("baidu_news", $con);
-    mysql_query("set names 'utf8'");
-    $result = mysql_query("SELECT * FROM $sortName");
+    mysqli_select_db($con, "baidu_news");
+    mysqli_query($con, "set names 'utf8'");
+    $result = mysqli_query($con, "SELECT * FROM $sortName");
     // 若读取到picture执行此操作
     if ($sortName == "picture") {
-        while ($row = mysql_fetch_array($result)) {
+        while ($row = mysqli_fetch_array($result)) {
             $num   = $row["news_id"];
             $title = $row["news_title"];
             $img   = $row["news_img"];
@@ -24,7 +24,7 @@ if (!$con) {
         }
         // 其他的新闻类执行此操作
     } else {
-        while ($row = mysql_fetch_array($result)) {
+        while ($row = mysqli_fetch_array($result)) {
             $num     = $row["news_id"];
             $title   = $row["news_title"];
             $img     = $row["news_img"];
@@ -43,5 +43,5 @@ if (!$con) {
         }
     }
 }
-mysql_close($con);
+mysqli_close($con);
 ?>

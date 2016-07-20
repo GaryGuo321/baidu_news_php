@@ -1,14 +1,14 @@
 <?php
 // 获取数据库
-$con  = mysql_connect("localhost", "root", "");
+$con  = mysqli_connect("localhost", "root", "123456");
 if (!$con) {
-    die('Could not connect: ' . mysql_error());
+    die("Connection failed: " . mysqli_connect_error());
 } else {
     // 为数据库插入内容
     $sort  = $_POST["news-sort"];
     $title = $_POST["news-title"];
     $image = $_POST["news-image"];
-    mysql_select_db("baidu_news", $con);
+    mysqli_select_db($con, "baidu_news");
     // 为picture类别插入内容
     if (($sort == "picture")) {
         $sql = "INSERT INTO $sort(news_title,news_img) VALUES ('" . $title . "','" . $image . "')";
@@ -19,15 +19,15 @@ if (!$con) {
         $time    = date('Y-m-d');
         $sql     = "INSERT INTO $sort(news_title,news_img,news_content,add_times,news_source) VALUES ('" . $title . "','" . $image . "','" . $content . "','" . $time . "','" . $source . "')";
     }
-    mysql_query("set names 'utf8'");
+    mysqli_query($con, "set names 'utf8'");
     // 判断成功或者失败
-    $result = mysql_query($sql, $con);
+    $result = mysqli_query($con, $sql);
     if (!$result) {
-        die('Error:' . mysql_error());
+        die('Error:' . mysqli_error($con));
     } else {
         echo "success";
         echo "<br/><a href=\"../html/homepage.html\">return homepage</a>";
     }
 }
-mysql_close($con);
+mysqli_close($con);
 ?>

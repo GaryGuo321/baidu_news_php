@@ -13,13 +13,18 @@ $userNameArr = $userPasswordArr = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userName     = test_input($_POST["user-name"]);
     $userPassword = test_input($_POST["user-password"]);
-    $con          = mysql_connect("localhost", "root", "");
+
+    // 将mysql -> mysqli
+    // 创建连接
+    $con = mysqli_connect("localhost", "root", "123456");
+
+    // 检测连接
     if (!$con) {
-        die('Could not connect: ' . mysql_error());
+        die("Connection failed: " . mysqli_connect_error());
     } else {
-        mysql_select_db("baidu_news", $con);
-        $result = mysql_query("SELECT * FROM user_message");
-        while ($row = mysql_fetch_array($result)) {
+        mysqli_select_db($con, "baidu_news");
+        $result = mysqli_query($con, "SELECT * FROM user_message");
+        while ($row = mysqli_fetch_array($result)) {
             if ($row['user_name'] != $userName) {
                 $userNameArr = "× 用户不存在";
             } else if ($row['user_password'] != $userPassword) {
@@ -29,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
     }
-    mysql_close($con);
+    mysqli_close($con);
 }
 function test_input($data)
 {
